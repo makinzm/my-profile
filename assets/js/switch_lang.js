@@ -17,6 +17,7 @@ function setLanguageElements(language) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const lang = getQueryParam('lang') || 'en';
+  const browserLang = window.navigator.language;
+  const lang = (browserLang === 'ja') ? 'ja' : 'en';
   setLanguageElements(lang);
-})
+});
