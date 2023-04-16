@@ -58,6 +58,17 @@
 		breakpoints.on('>medium', function() {
 			$footer.appendTo($header);
 		});
+	
+	// Hide target element on small screens
+		breakpoints.on('>medium', function() {
+			$('.target-element').addClass('is-hidden');
+		});
+		
+	// Show target element on medium and larger screens
+		breakpoints.on('<=medium', function() {
+			$('.target-element').removeClass('is-hidden');
+		});
+  
 
 	// Header.
 
